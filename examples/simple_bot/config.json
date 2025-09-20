@@ -1,0 +1,7 @@
+{
+  "name": "Simple Bot",
+  "description": "A simple example trading bot",
+  "version": "1.0.0",
+  "symbol": "BTC/USD",
+  "timeframe": "1h"
+}

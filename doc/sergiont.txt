@@ -1,0 +1,46 @@
+*sergiont.txt*  Trading indicators and bots management for Neovim
+
+Author:  Sergiont Team
+License: MIT
+
+INTRODUCTION                                    *sergiont*
+
+Sergiont is a Neovim extension for deploying and managing trading indicators 
+and bots for TradingView and other platforms.
+
+COMMANDS                                        *sergiont-commands*
+
+:SergiontIndicatorNew {name}                    *:SergiontIndicatorNew*
+        Create a new trading indicator with the given name.
+
+:SergiontBotNew {name}                          *:SergiontBotNew*
+        Create a new trading bot with the given name.
+
+:SergiontDeploy {target}                        *:SergiontDeploy*
+        Deploy the specified indicator or bot.
+
+:SergiontTest [target]                          *:SergiontTest*
+        Run tests for the specified indicator or bot. If no target is
+        specified, run all tests.
+
+:SergiontSetup                                   *:SergiontSetup*
+        Setup the Sergiont plugin.
+
+CONFIGURATION                                   *sergiont-configuration*
+
+You can configure Sergiont by calling the setup function:
+
+>
+        require('sergiont').setup({
+          tradingview = {
+            api_key = "your_api_key",
+            api_secret = "your_api_secret",
+          },
+          indicators_path = "/path/to/indicators",
+          bots_path = "/path/to/bots",
+          enable_pine_syntax = true,
+          enable_tradingview_integration = true,
+        })
+<
+
+vim:tw=78:ts=8:ft=help:norl:

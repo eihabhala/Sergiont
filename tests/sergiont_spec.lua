@@ -1,0 +1,41 @@
+-- Tests for Sergiont plugin
+
+describe('Sergiont', function()
+  it('should load the main module', function()
+    local sergiont = require('sergiont')
+    assert.not_nil(sergiont)
+    assert.is_function(sergiont.setup)
+  end)
+
+  it('should have indicator module', function()
+    local indicator = require('sergiont.indicator')
+    assert.not_nil(indicator)
+    assert.is_function(indicator.new)
+    assert.is_function(indicator.list)
+  end)
+
+  it('should have bot module', function()
+    local bot = require('sergiont.bot')
+    assert.not_nil(bot)
+    assert.is_function(bot.new)
+    assert.is_function(bot.list)
+  end)
+
+  it('should have deploy module', function()
+    local deploy = require('sergiont.deploy')
+    assert.not_nil(deploy)
+    assert.is_function(deploy.deploy)
+  end)
+
+  it('should have test module', function()
+    local test = require('sergiont.test')
+    assert.not_nil(test)
+    assert.is_function(test.run_tests)
+  end)
+
+  it('should have config module', function()
+    local config = require('sergiont.config')
+    assert.not_nil(config)
+    assert.is_function(config.get_default_config)
+  end)
+end)

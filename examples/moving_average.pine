@@ -1,0 +1,14 @@
+//@version=5
+indicator("Simple Moving Average", overlay=true)
+
+// Input for the moving average length
+length = input.int(14, title="MA Length")
+
+// Calculate the moving average
+ma = ta.sma(close, length)
+
+// Plot the moving average
+plot(ma, color=color.blue, title="MA")
+
+// Plot the closing price for reference
+plot(close, color=color.gray, title="Close Price")
